@@ -1,0 +1,14 @@
+<?php include('header.php'); ?>
+<h1 class="text-3xl font-bold">Create Category</h1>
+<hr class="h-1 bg-red-600">
+
+<form action="">
+    <input type="text" class="border p-2 rounded w-full my-2" placeholder="Category Name">
+    <input type="text" class="border p-2 rounded w-full my-2" placeholder="Priority">
+    <div class="flex justify-center my-2">
+        <input type="submit" class="bg-blue-600 text-white px-2 py-1 rounded" value="Add Category">
+        <a href="category.php" class="bg-red-600 text-white px-2 py-1 rounded ml-2">Cancel</a>
+    </div>
+</form>
+
+<?php include('footer.php'); ?>

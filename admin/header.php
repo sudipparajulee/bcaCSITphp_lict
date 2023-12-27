@@ -14,8 +14,8 @@
             <img src="https://www.bitmapitsolution.com/images/logo/logo.png" class="w-10/12 bg-white px-4 py-2 mt-5 mx-auto rounded-lg" alt="">
 
             <div class="mt-5">
-                <a href="" class="text-lg block p-2 my-2 hover:bg-gray-300">Dashboard</a>
-                <a href="" class="text-lg block p-2 my-2 hover:bg-gray-300">Category</a>
+                <a href="dashboard.php" class="text-lg block p-2 my-2 hover:bg-gray-300">Dashboard</a>
+                <a href="category.php" class="text-lg block p-2 my-2 hover:bg-gray-300">Category</a>
                 <a href="" class="text-lg block p-2 my-2 hover:bg-gray-300">News</a>
                 <a href="" class="text-lg block p-2 my-2 hover:bg-gray-300">Logout</a>
             </div>
