@@ -1,4 +1,12 @@
-<?php include('header.php'); ?>
+<?php 
+include('header.php'); 
+//select query
+$qry = "SELECT * FROM categories";
+include('../includes/dbconnection.php');
+$res = mysqli_query($con,$qry);
+include('../includes/closeconnection.php');
+
+?>
 <h1 class="text-3xl font-bold">Categories</h1>
 <hr class="h-1 bg-red-600">
 
@@ -12,14 +20,18 @@
         <th class="border border-gray-100 bg-gray-300 p-2">Category Name</th>
         <th class="border border-gray-100 bg-gray-300 p-2">Action</th>
     </tr>
+    <?php
+    while($row = mysqli_fetch_assoc($res)){
+       ?>
     <tr>
-        <td class="border p-2">1</td>
-        <td class="border p-2">Sports</td>
+        <td class="border p-2"><?php echo $row['priority']; ?></td>
+        <td class="border p-2"><?php echo $row['categoryname']; ?></td>
         <td class="border p-2">
             <a href="" class="bg-blue-600 text-white px-2 py-1 rounded">Edit</a>
             <a href="" class="bg-red-600 text-white px-2 py-1 rounded">Delete</a>
         </td>
     </tr>
+    <?php } ?>
 </table>
 
 <?php include('footer.php'); ?>

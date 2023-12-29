@@ -1,16 +1,5 @@
 <?php
-//create database connection
-$server = 'localhost';
-$username = 'root';
-$pass = '';
-$database = 'newsapp';
-
-$con = mysqli_connect($server,$username,$pass,$database);
-
-if(!$con)
-{
-    die('Connection Cannot Establish');
-}
+include('../includes/dbconnection.php');
 
 //get values from the form
 $categoryname = $_POST['categoryname'];
@@ -22,6 +11,8 @@ $qry = "INSERT INTO categories(categoryname,priority) VALUES('$categoryname',$pr
 //execute query
 $res = mysqli_query($con,$qry);
 
+//close connection
+include('../includes/closeconnection.php');
 if($res)
 {
     echo "<script>alert('Category Added Successfully');
