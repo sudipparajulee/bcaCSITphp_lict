@@ -1,7 +1,7 @@
 <?php 
 include('header.php'); 
 //select query
-$qry = "SELECT * FROM categories";
+$qry = "SELECT * FROM categories ORDER BY priority";
 include('../includes/dbconnection.php');
 $res = mysqli_query($con,$qry);
 include('../includes/closeconnection.php');
@@ -27,7 +27,7 @@ include('../includes/closeconnection.php');
         <td class="border p-2"><?php echo $row['priority']; ?></td>
         <td class="border p-2"><?php echo $row['categoryname']; ?></td>
         <td class="border p-2">
-            <a href="" class="bg-blue-600 text-white px-2 py-1 rounded">Edit</a>
+            <a href="editcategory.php?id=<?php echo $row['id'];?>" class="bg-blue-600 text-white px-2 py-1 rounded">Edit</a>
             <a href="" class="bg-red-600 text-white px-2 py-1 rounded">Delete</a>
         </td>
     </tr>
