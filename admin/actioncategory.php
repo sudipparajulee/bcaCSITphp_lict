@@ -53,4 +53,25 @@ if(isset($_POST['update']))
     }
 }
 
+//delete
+
+if(isset($_GET['deleteid']))
+{
+    $catid = $_GET['deleteid'];
+    $qry = "DELETE FROM categories WHERE id=$catid";
+    include '../includes/dbconnection.php';
+    $res = mysqli_query($con,$qry);
+    include '../includes/closeconnection.php';
+    if($res)
+    {
+        echo "<script>alert('Category Deleted Successfully');
+        window.location.href='category.php';</script>";
+    }
+    else
+    {
+        echo "<script>alert('Something Went Wrong');
+        window.location.href='category.php';</script>";
+    }
+}
+
 ?>
