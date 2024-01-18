@@ -16,7 +16,7 @@
             <div class="mt-5">
                 <a href="dashboard.php" class="text-lg block p-2 my-2 hover:bg-gray-300">Dashboard</a>
                 <a href="category.php" class="text-lg block p-2 my-2 hover:bg-gray-300">Category</a>
-                <a href="" class="text-lg block p-2 my-2 hover:bg-gray-300">News</a>
+                <a href="news.php" class="text-lg block p-2 my-2 hover:bg-gray-300">News</a>
                 <a href="" class="text-lg block p-2 my-2 hover:bg-gray-300">Logout</a>
             </div>
         </div>
