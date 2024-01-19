@@ -7,13 +7,13 @@ include('../includes/closeconnection.php');
 <h1 class="text-3xl font-bold">Create News</h1>
 <hr class="h-1 bg-red-600">
 
-<form action="actionnews.php" method="POST">
+<form action="actionnews.php" method="POST" enctype="multipart/form-data">
     <select name="category_id" class="border p-2 rounded w-full my-2">
         <?php while($row = mysqli_fetch_assoc($res)){ ?>
-        <option value=""><?php echo $row['categoryname']; ?></option>
+        <option value="<?php echo $row['id']; ?>"><?php echo $row['categoryname']; ?></option>
         <?php } ?>
     </select>
-    <input type="date" class="border p-2 rounded w-full my-2" name="news_date">
+    <input type="date" class="border p-2 rounded w-full my-2" name="news_date" value="<?php echo date('Y-m-d'); ?>">
     <input type="text" class="border p-2 rounded w-full my-2" name="title" placeholder="News Title">
     <input type="text" class="border p-2 rounded w-full my-2" name="description" placeholder="Enter Description">
     <input type="file" name="photopath" class="border p-2 rounded w-full my-2">
