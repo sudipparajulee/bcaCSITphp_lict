@@ -18,6 +18,9 @@ include('../includes/closeconnection.php');
     <tr>
         <th class="border border-gray-100 bg-gray-300 p-2">Date</th>
         <th class="border border-gray-100 bg-gray-300 p-2">Title</th>
+        <th class="border border-gray-100 bg-gray-300 p-2">Description</th>
+        <th class="border border-gray-100 bg-gray-300 p-2">Picture</th>
+        <th class="border border-gray-100 bg-gray-300 p-2">Category</th>
         <th class="border border-gray-100 bg-gray-300 p-2">Action</th>
     </tr>
     <?php
@@ -26,6 +29,9 @@ include('../includes/closeconnection.php');
     <tr>
         <td class="border p-2"><?php echo $row['news_date']; ?></td>
         <td class="border p-2"><?php echo $row['title']; ?></td>
+        <td class="border p-2"><?php echo $row['description']; ?></td>
+        <td class="border p-2 w-44"><img src="uploads/<?php echo $row['photopath']; ?>" alt=""></td>
+        <td class="border p-2"><?php echo $row['category_id']; ?></td>
         <td class="border p-2">
             <a href="editcategory.php?id=<?php echo $row['id'];?>" class="bg-blue-600 text-white px-2 py-1 rounded">Edit</a>
             <a href="actioncategory.php?deleteid=<?php echo $row['id']; ?>" class="bg-red-600 text-white px-2 py-1 rounded" onclick="return confirm('Are you sure to delete?');">Delete</a>
