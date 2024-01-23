@@ -25,15 +25,21 @@ include('../includes/closeconnection.php');
     </tr>
     <?php
     while($row = mysqli_fetch_assoc($res)){
+        $catid = $row['category_id'];
+        $catqry = "SELECT * FROM categories WHERE id=$catid";
+        include('../includes/dbconnection.php');
+        $catresult = mysqli_query($con,$catqry);
+        include('../includes/closeconnection.php');
+        $rowcat = mysqli_fetch_assoc($catresult);
        ?>
     <tr>
         <td class="border p-2"><?php echo $row['news_date']; ?></td>
         <td class="border p-2"><?php echo $row['title']; ?></td>
         <td class="border p-2"><?php echo $row['description']; ?></td>
         <td class="border p-2 w-44"><img src="uploads/<?php echo $row['photopath']; ?>" alt=""></td>
-        <td class="border p-2"><?php echo $row['category_id']; ?></td>
+        <td class="border p-2"><?php echo $rowcat['categoryname']; ?></td>
         <td class="border p-2">
-            <a href="editcategory.php?id=<?php echo $row['id'];?>" class="bg-blue-600 text-white px-2 py-1 rounded">Edit</a>
+            <a href="editnews.php?id=<?php echo $row['id'];?>" class="bg-blue-600 text-white px-2 py-1 rounded">Edit</a>
             <a href="actioncategory.php?deleteid=<?php echo $row['id']; ?>" class="bg-red-600 text-white px-2 py-1 rounded" onclick="return confirm('Are you sure to delete?');">Delete</a>
         </td>
     </tr>
