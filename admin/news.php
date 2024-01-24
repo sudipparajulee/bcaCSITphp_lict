@@ -40,7 +40,7 @@ include('../includes/closeconnection.php');
         <td class="border p-2"><?php echo $rowcat['categoryname']; ?></td>
         <td class="border p-2">
             <a href="editnews.php?id=<?php echo $row['id'];?>" class="bg-blue-600 text-white px-2 py-1 rounded">Edit</a>
-            <a href="actioncategory.php?deleteid=<?php echo $row['id']; ?>" class="bg-red-600 text-white px-2 py-1 rounded" onclick="return confirm('Are you sure to delete?');">Delete</a>
+            <a href="actionnews.php?deleteid=<?php echo $row['id']; ?>" class="bg-red-600 text-white px-2 py-1 rounded" onclick="return confirm('Are you sure to delete?');">Delete</a>
         </td>
     </tr>
     <?php } ?>
