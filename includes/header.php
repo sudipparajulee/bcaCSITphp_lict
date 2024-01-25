@@ -2,8 +2,20 @@
 
 <head>
     <title>My PHP Project</title>
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-    <link rel="stylesheet" href="tailwind.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <!-- <link rel="stylesheet" href="tailwind.css"> -->
+    <!-- <style>
+        .line-clamp-3{
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;  
+            overflow: hidden;
+        }
+    </style> -->
 </head>
 
 <body>
