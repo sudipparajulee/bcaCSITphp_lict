@@ -35,6 +35,6 @@ include 'includes/closeconnection.php';
                 ?>
             <a class="mx-2" href="categorynews.php?catid=<?php echo $cat['id'] ?>"><?php echo $cat['categoryname'] ?></a>
                 <?php } ?>
-            <a class="mx-2" href="admin/dashboard.php">Login</a>
+            <a class="mx-2" href="login.php">Login</a>
         </div>
     </nav>
