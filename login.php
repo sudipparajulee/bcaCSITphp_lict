@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'includes/header.php';
 ?>
 
@@ -37,7 +38,10 @@ if(isset($_POST['username']))
 
     if(mysqli_num_rows($result) > 0)
     {
-        echo '<script>alert("Login Successful"); window.location="admin/dashboard.php";</script>';
+        $row = mysqli_fetch_assoc($result);
+        $_SESSION['fullname'] = $row['fullname'];
+        $_SESSION['username'] = $row['username'];
+        echo '<script>window.location="admin/dashboard.php";</script>';
     }
     else
     {
