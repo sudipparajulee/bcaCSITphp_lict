@@ -17,6 +17,8 @@
         <h1 class="text-lg">Total Categories</h1>
         <h1 class="text-3xl">52</h1>
     </div>
+
+    <a href="sendmail.php">Send Mail</a>
 </div>
 
 <?php include('footer.php'); ?>
